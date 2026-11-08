@@ -32,9 +32,9 @@ if "%PLATFORM%" == "x86" (
 set ZIP_FILENAME=Merge7z%MERGE7Z_VERSION%-%PLATFORM%.zip
 
 if "%PLATFORM%" == "ARM64" (
-  copy /y "..\..\Externals\7zip\CPP\7zip\Bundles\Format7zF\arm64\7z.dll" %DISTDIR%\%PLATFORM%\Merge7z\
+  copy /y ".\7zip\CPP\7zip\Bundles\Format7zF\arm64\7z.dll" %DISTDIR%\%PLATFORM%\Merge7z\
 ) else if "%PLATFORM%" == "ARM" (
-  copy /y "..\..\Externals\7zip\CPP\7zip\Bundles\Format7zF\arm\7z.dll" %DISTDIR%\%PLATFORM%\Merge7z\
+  copy /y ".\7zip\CPP\7zip\Bundles\Format7zF\arm\7z.dll" %DISTDIR%\%PLATFORM%\Merge7z\
 ) else (
   copy /y "%ProgramFilesP%\7-Zip\7z.dll" %DISTDIR%\%PLATFORM%\Merge7z\
 )
