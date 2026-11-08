@@ -3,7 +3,7 @@ pushd "%~dp0"
 setlocal
 set MERGE7z_VERSION=2605.0
 set PATH="%ProgramFiles%\7-zip";"%ProgramFiles(x86)%\7-zip";%PATH%
-set DISTDIR=..\..\Build\Releases
+set DISTDIR=.\Build\Releases
 
 if "%1" == "" (
   call :BuildZip x86
@@ -23,7 +23,7 @@ goto :eof
 set PLATFORM=%1
 
 mkdir %DISTDIR%\%PLATFORM%\Merge7z\Lang 2> NUL
-copy ..\..\Build\%PLATFORM%\Release\Merge7z\Merge7z.dll %DISTDIR%\%PLATFORM%\Merge7z\
+copy .\Build\%PLATFORM%\Release\Merge7z\Merge7z.dll %DISTDIR%\%PLATFORM%\Merge7z\
 if "%PLATFORM%" == "x86" (
   set "ProgramFilesP=%ProgramFiles(x86)%"
 ) else (
